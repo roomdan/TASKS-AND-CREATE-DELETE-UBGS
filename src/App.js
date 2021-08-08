@@ -5,14 +5,8 @@ import TaskComposition from './Tasks-Comp';
 
 function App() {
   
-  const [add, setAdd] = useState(false); const [count, setCount] = useState(-1);
+  const [add, setAdd] = useState(false); const [count, setCount] = useState(0);
   const [E, setE] = useState(0);
-
-  useEffect(
-    ()=>{
-      setCount(count+1)
-    },[E]
-  )
 
   return (
     <div className="App">
@@ -31,7 +25,7 @@ function App() {
                 <CreateNew act={(e)=>{setE(e)}} view={add} changeView={e=>{setAdd(e)}}/>
             </div>
             <div className='body-box'>
-              <TaskComposition global={E}/>
+              <TaskComposition global={E} length={(c)=>{setCount(c)}}/>
             </div>
           </div>
         </div>

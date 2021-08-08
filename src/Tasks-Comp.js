@@ -3,16 +3,17 @@ import {AccesData, Delete, Edit} from "./acces-CRD-https"
 import LoadingComponent from "./loading-component";
 import TaskListRender from "./task-list-render";
 
-const TaskComposition = ({global})=>{
+const TaskComposition = ({global, length})=>{
 
     const [tasks, setTasks] = useState(null);
     const [actually, SetActualy] = useState(0);
 
     useEffect(
         ()=>{
-            const acces =async()=>{
+            const acces = async()=>{
                 const get = await AccesData();
-                setTasks(get.data.todos)
+                setTasks(get.data.todos);
+                length(get.data.todos.length)
                 SetActualy(true)
             }
             acces();

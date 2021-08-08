@@ -26,7 +26,6 @@ const Delete = (id)=>{
              method:'DELETE',
              baseURL:'https://todos-go.herokuapp.com/api/todos',
              url:id,
-             responseType:'json',
             }
         )
     }
