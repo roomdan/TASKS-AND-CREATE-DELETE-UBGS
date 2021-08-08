@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import CreateNew from './create-new';
 import TaskComposition from './Tasks-Comp';

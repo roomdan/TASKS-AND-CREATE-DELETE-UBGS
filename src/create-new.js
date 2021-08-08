@@ -19,7 +19,7 @@ const CreateNew = ({view, changeView, act})=>{
     useEffect(
         ()=>{
             act(actually)
-        },[actually]
+        },[actually, act]
     )
 
     const Put = (New, user)=>{

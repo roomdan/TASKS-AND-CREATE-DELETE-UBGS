@@ -17,7 +17,7 @@ const TaskComposition = ({global, length})=>{
                 SetActualy(true)
             }
             acces();
-        }, [actually, global]
+        }, [actually, global, length]
     )
 
 const Put = (New, user)=>{
